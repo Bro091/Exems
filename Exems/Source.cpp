@@ -89,7 +89,7 @@ int main() {
 
 
 	//Вопрос 94
-	int num1 = 1, num2 = 2;
+	/*int num1 = 1, num2 = 2;
 	
 	order(num1, num2);
 	std::cout << "num1 = " << num1 << " num2 = " << num2 << std::endl;
@@ -98,7 +98,77 @@ int main() {
 	std::cout << "num1 = " << num1 << " num2 = " << num2 << std::endl;
 
 	setx() = 92;
-	std::cout << "x =  " << x << std::endl;
+	std::cout << "x =  " << x << std::endl;*/
+
+
+	// Вопрос 31
+
+	/*const int n = 5;
+		int a[n], i, j, k, tmp;
+
+		// Ввод массива
+		for (i = 0; i < n; i++)
+		{
+			std::cout << "Введите " << i << " элемент: ";
+			std::cin >> a[i];
+		}
+
+		std::cout << "Введите k: ";
+		std::cin >> k;
+
+		// Перестановка
+		for (i = 0; i < k; i++)
+		{
+			for (j = n - 1; j >= 0; j--)
+			{
+				if (j == n - 1)
+					tmp = a[n - 1];
+				else
+					a[j + 1] = a[j];
+			}
+			a[0] = tmp;
+		}
+
+		// Вывод рез-та
+		std::cout << "Результат: " << std::endl;
+		for (i = 0; i < n; i++)
+		{
+			std::cout << a[i] << ' ';
+		}
+
+		std::cout << std::endl;*/
+
+	// Вопрос 133
+
+	/*struct str {
+		int a = 1;
+		int b = 2;
+	};
+	str s;
+	std::cout << s.a << std::endl;
+	std::cout << s.b << std::endl;
+	str* p_s = &s;
+	std::cout << p_s->a << std::endl;
+	std::cout << p_s->b << std::endl;*/
+
+	// Вопрос 139
+	
+	/*struct str {
+		int a = 1;
+		int b = 2;
+	};
+
+	str s;
+	struct str1 {
+		int z = 0;
+		str* p_s;
+	};
+	str1 s1;
+	s1.p_s = &s;
+	std::cout << s1.z << ' ' << s1.p_s->a << ' ' << s1.p_s->b << std::endl;*/
+
+
+
 
 
 	return 0;
