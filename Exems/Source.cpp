@@ -20,6 +20,12 @@ void act5(char* name) {
 
 int* max(int* a, int* b);
 
+template <typename T>
+void order(T& a, T& b);
+
+int x;
+int& setx();
+
 int main() {
 	setlocale(LC_ALL, "Ru");
 	//Вопрос 74
@@ -74,14 +80,50 @@ int main() {
 	std::cout << *pn << std::endl;
 	std::cout << "max: " << *max(&n, &m) << std::endl;*/
 	
-	char str[] = "Hello world!";
+	//  Вопрос 124
+	/*char str[] = "Hello world!";
 	for (int i = 0; i < str.length(); i++)
 	{
 		std::cout << str[i] << std::endl;
-	}
+	}*/
+
+
+	//Вопрос 94
+	int num1 = 1, num2 = 2;
+	
+	order(num1, num2);
+	std::cout << "num1 = " << num1 << " num2 = " << num2 << std::endl;
+	num1 = 4, num2 = 3;
+	order(num1, num2);
+	std::cout << "num1 = " << num1 << " num2 = " << num2 << std::endl;
+
+	setx() = 92;
+	std::cout << "x =  " << x << std::endl;
+
 
 	return 0;
 }
+
+
+int& setx() 
+{
+	return x;
+
+}
+
+
+template <typename T>
+void order(T& a, T& b) 
+{
+	if(a > b)
+	{
+		T tmp = a;
+		a = b;
+		b = tmp;
+	}
+}
+
+
 int* max(int* a, int* b) 
 {
 	if (*a > *b)
